@@ -1,0 +1,129 @@
+@import "../../mixins.scss";
+
+.container {
+	height: 100vh;
+	background-color: $bg;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	h1 {
+		font-size: 6rem;
+		color: $white;
+		line-height: 1.5;
+		font-weight: 400;
+	}
+}
+.header {
+	height: 7rem;
+	padding-left: 4rem;
+
+	display: flex;
+	align-items: center;
+	background: linear-gradient(0deg, rgba(19, 18, 18, 0.05) 0%, rgb(19, 18, 18) 100%);
+
+	img {
+		width: 8rem;
+	}
+
+	@media (max-width: 700px) {
+		justify-content: center;
+		padding-left: 0;
+		img {
+			width: 15rem;
+		}
+	}
+}
+.content {
+	flex: 1;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	@media (max-width: 700px) {
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		margin-top: 10rem;
+	}
+}
+
+.borderHover {
+	border: 3px solid rgba(255, 255, 255, 0.171);
+	border-radius: 1rem;
+	overflow: hidden;
+	z-index: 2;
+	width: 15rem;
+	height: 15rem;
+	min-width: 60px;
+}
+
+.imgsUsers {
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+
+	@media (max-width: 700px) {
+		flex-wrap: wrap;
+	}
+
+	div {
+		&:hover > {
+			span {
+				cursor: pointer;
+				color: $white;
+			}
+			.borderHover {
+				border: 3px solid rgb(255, 255, 255);
+				cursor: pointer;
+				opacity: 1;
+			}
+		}
+	}
+
+	span {
+		color: #6e6e6e;
+		font-size: 1.5rem;
+		line-height: 2;
+	}
+
+	img {
+		cursor: pointer;
+		width: 15rem;
+		height: 15rem;
+		min-width: 60px;
+	}
+}
+.borderLi {
+	width: 15rem;
+	height: 15rem;
+	min-width: 60px;
+	margin: 1.5rem;
+}
+
+.managerButtom {
+	border: 1px solid #6e6e6e;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 20rem;
+	height: 5rem;
+	margin-top: 5rem;
+
+	span {
+		pointer-events: none;
+		font-size: 1.5rem;
+		color: #6e6e6e;
+	}
+
+	&:hover {
+		border-color: $white;
+		span {
+			color: $white;
+		}
+	}
+}

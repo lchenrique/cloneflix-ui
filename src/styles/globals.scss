@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "./mixins.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Martel+Sans:wght@400;600;700&display=swap");
+
+* {
+	font-family: "Martel Sans", sans-serif;
+}
+
+@media (max-width: 1300px) {
+	html {
+		font-size: 64.5%;
+	}
+}
+@media (max-width: 700px) {
+	html {
+		font-size: 44.5%;
+	}
+}
+
+body,
+input,
+textarea,
+button,
+span {
+	font: 400 1rem "Martel Sans", sans-serif;
+}
+button{
+	background: transparent;
+	cursor: pointer;
+}
+
+body, h1, h2, h3, p, ul, li{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul, li {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body{
+	background-color: $bg;
+
+}
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}

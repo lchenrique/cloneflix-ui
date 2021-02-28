@@ -1,0 +1,173 @@
+@import "../../mixins.scss";
+
+.container {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.headerWrapper {
+    background-color: transparent;
+    transition: background-color 0.5s;
+    position: relative;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding-top: 20px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 5rem;
+    z-index: 10;
+}
+
+.header {
+    position: relative;
+    margin: 0 3.5rem;
+    height: 100%;
+
+    img {
+        width: 10rem;
+    }
+}
+.content {
+    width: 100%;
+}
+
+.heroCard {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 746.984px;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 746.984px;
+        -o-object-fit: cover;
+        object-fit: cover;
+        z-index: 1;
+    }
+}
+
+.maskImage {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.911) 0%, rgba(0, 0, 0, 0.376) 50%, rgba(0, 0, 0, 0.89) 100%);
+    z-index: 2;
+}
+
+.callToAction {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
+    z-index: 3;
+    margin-top: 11rem;
+    text-align: center;
+
+    div {
+        h3 {
+            color: $white;
+            font-size: 1.7rem;
+            line-height: 1.1;
+            padding-top: 1.5rem;
+        }
+        p {
+            color: $white;
+            font-size: 1.2rem;
+            line-height: 1.1;
+            padding-top: 1.5rem;
+        }
+    }
+
+    h1 {
+        color: $white;
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 1.1;
+    }
+
+    .emailForm {
+        display: flex;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .emailInput {
+        height: 4rem;
+        flex: 3;
+        position: relative;
+
+        input {
+            height: 4rem;
+            width: 100%;
+        }
+
+        label {
+            position: absolute;
+            left: 0.5rem;
+            top: 1rem;
+            -webkit-animation-name: labelAnimeReverse;
+            -webkit-animation-duration: 0.2s;
+        }
+    }
+
+    .emailInputFocused {
+        height: 4rem;
+        flex: 3;
+        position: relative;
+        input {
+            height: 4rem;
+            width: 100%;
+            padding: 10px 10px 0;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        label {
+            position: absolute;
+            left: 0.5rem;
+            top: 0.2rem;
+            font-size: 0.8rem;
+            -webkit-animation-name: labelAnime;
+            -webkit-animation-duration: 0.2s;
+        }
+    }
+
+    button {
+        height: 4rem;
+        flex: 1;
+        margin: 0;
+        background-color: $flix;
+        color: $white;
+        font-size: 1.7rem;
+    }
+
+    @-webkit-keyframes labelAnime {
+        from {
+            font-size: 1rem;
+            top: 1rem;
+        }
+        to {
+            font-size: 0.8rem;
+            top: 0.2rem;
+        }
+    }
+    @-webkit-keyframes labelAnimeReverse {
+        from {
+            font-size: 0.8rem;
+            top: 0.2rem;
+        }
+        to {
+            font-size: 1rem;
+            top: 1rem;
+        }
+    }
+}
