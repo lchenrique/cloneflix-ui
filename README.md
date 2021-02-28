@@ -13,7 +13,7 @@ Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_mediu
 
 
 ```bash
-git clone https://github.com/libgit2/libgit2
+git clone https://github.com/lchenrique/cloneflix-ui.git
 # after
 yarn dev
 ```
